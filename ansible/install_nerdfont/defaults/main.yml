@@ -1,0 +1,6 @@
+---
+nerdfonts_raw_fonts_url: "https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts"
+# Search on URL https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
+nerdfonts_install_fonts:
+ - "Hack/Regular/HackNerdFontMono-Regular.ttf"
+ - "FiraCode/Regular/FiraCodeNerdFontMono-Regular.ttf"

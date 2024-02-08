@@ -1,0 +1,6 @@
+---
+- name: Download {{ font|basename }}.
+  get_url:
+    dest: "{{ nerdfonts_fonts_dir }}/{{ font|basename }}"
+    owner: "{{ ansible_user_id }}"
+    url: "{{ nerdfonts_raw_fonts_url }}/{{ font | regex_replace(' ', '%20') }}"

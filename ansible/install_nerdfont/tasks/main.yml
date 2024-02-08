@@ -1,0 +1,20 @@
+---
+- name: Set fonts directory.
+  set_fact:
+    nerdfonts_fonts_dir: "/home/{{ ansible_user_id }}/.local/share/fonts"
+
+- name: Ensure fonts directory exists.
+  file:
+    owner: "{{ ansible_user_id }}"
+    path: "{{ nerdfonts_fonts_dir }}"
+    recurse: true
+    state: directory
+
+- name: Download individual fonts to fonts directory.
+  include_tasks: "install_font.yml"
+  loop: "{{ nerdfonts_install_fonts }}"
+  loop_control:
+    loop_var: font
+
+- name: Update font cache.
+  command: fc-cache -fv
