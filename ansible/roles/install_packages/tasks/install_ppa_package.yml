@@ -1,0 +1,9 @@
+---
+- name: Installing PPA package
+  debug:
+    msg: "Installing PPA package: {{ ppa_name }}"
+
+- apt:
+    name: "{{ ppa_name }}"
+    state: present
+    ignore_errors: yes

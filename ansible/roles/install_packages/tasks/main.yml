@@ -1,0 +1,15 @@
+---
+- name: Install CLI applications
+  include_tasks: install_apt.yml
+  vars:
+    packages: "{{ apt }}"
+
+- name: Install NeoVim
+  include_tasks: install_ppa.yml
+  vars:
+    ppas: "{{ ppa }}"
+
+- name: Install Ruby prerequisites
+  include_tasks: install_apt.yml
+  vars:
+    packages: "{{ ruby }}"

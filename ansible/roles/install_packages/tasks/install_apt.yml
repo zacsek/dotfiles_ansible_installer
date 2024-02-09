@@ -1,0 +1,12 @@
+---
+- name: Install apt packages
+  apt:
+    name: "{{ package_name }}"
+    state: present
+  ignore_errors: true
+  loop: "{{ packages | dict2items }}"
+  loop_control:
+    loop_var: package
+  vars:
+    package_name: "{{ package.key }}"
+    package_info: "{{ package.value }}"

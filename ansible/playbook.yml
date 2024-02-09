@@ -1,5 +1,13 @@
 ---
 - hosts: localhost
+
+  pre_tasks:
+    - name: Get Ubuntu codename
+      set_fact:
+        ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os-release') }}"
+
   tasks:
     - include_role: 
         name: install_nerdfont
+    - include_role:
+        name: install_packages
