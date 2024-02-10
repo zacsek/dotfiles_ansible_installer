@@ -9,4 +9,3 @@
     loop_var: package
   vars:
     package_name: "{{ package.key }}"
-    package_info: "{{ package.value }}"

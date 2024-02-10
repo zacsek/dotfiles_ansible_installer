@@ -1,2 +1,36 @@
 ---
-# tasks file for install_asdf
+- name: Install ASDF prerequisites.
+  apt:
+    name:
+      - git
+      - curl
+      - build-essential
+      - libssl-dev
+    state: present
+
+- name: Download and install asdf
+  git:
+    repo: https://github.com/asdf-vm/asdf.git
+    dest: ~/.asdf
+    mode: 0755
+
+- name: Reload shell configuration
+  command: source ~/.bashrc
+
+- name: Install system dependencies for plugins
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ asdf | map(attribute='dependencies') | flatten | unique }}"
+
+- name: Install asdf plugin repos
+  community.docker.docker_command:
+    command: asdf plugin add {{ item.plugin }} {{ item.repo }}
+  loop: "{{ asdf }}"
+
+- name: Install latest package for each plugin and set as global
+  blockinfile:
+    path: ~/.tool-versions
+    block: |
+      {{ item.plugin }} latest
+  loop: "{{ asdf }}"
