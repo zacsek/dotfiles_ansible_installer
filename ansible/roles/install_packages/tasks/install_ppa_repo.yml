@@ -1,9 +1,0 @@
----
-- name: Add PPA repository
-  debug:
-    msg: "Adding PPA repo: {{ ppa_source }}"
-
-- apt_repository:
-    repo: "{{ ppa_source }}"
-    codename: "{{ ubuntu_codename }}"
-    state: present

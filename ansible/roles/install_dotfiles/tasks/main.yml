@@ -1,0 +1,24 @@
+---
+- name: Install dotfiles prerequisites
+  apt:
+    name:
+      - bash
+      - zsh
+      - git
+      - stow
+      - vim
+    state: present
+
+- name: Install NeoVim
+  include_tasks: install_ppa.yml
+
+- name: Checkout dotfiles
+  git:
+    repo: https://github.com/zacsek/dotfiles
+    dest: ~/.dotfiles
+
+- name: Backup all conflicting configurations
+  debug: TODO
+
+- name: Execute stow
+  command: stow

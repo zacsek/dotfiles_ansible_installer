@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Include packages.yaml into packages var
+      include_vars:
+        file: packages.yaml
+        name: packages
+
+    - name: Package sections
+      ansible.builtin.debug:
+        msg: "{{ packages.apt | list }}"
+
+    - name: Packages to be installed
+      ansible.builtin.debug:
+        # msg: "{{ packages.apt | dict2items | map(attribute='value') | map('dict2items') | flatten | map(attribute='key') }}"
+        msg: "{{ extractor }}"
+      vars:
+        extractor: "{{ packages.apt | dict2items | map(attribute='value') | map('dict2items') | flatten | map(attribute='key') | list }}"

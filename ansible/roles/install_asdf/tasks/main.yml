@@ -12,20 +12,17 @@
   git:
     repo: https://github.com/asdf-vm/asdf.git
     dest: ~/.asdf
-    mode: 0755
 
 - name: Reload shell configuration
   command: source ~/.bashrc
 
 - name: Install system dependencies for plugins
   apt:
-    name: "{{ item }}"
+    name: "{{ asdf | map(attribute='dependencies') | select('defined') | flatten | unique | sort }}"
     state: present
-  loop: "{{ asdf | map(attribute='dependencies') | flatten | unique }}"
 
 - name: Install asdf plugin repos
-  community.docker.docker_command:
-    command: asdf plugin add {{ item.plugin }} {{ item.repo }}
+  command: asdf plugin add {{ item.plugin }} {{ item.repo }}
   loop: "{{ asdf }}"
 
 - name: Install latest package for each plugin and set as global

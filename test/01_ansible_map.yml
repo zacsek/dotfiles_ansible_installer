@@ -1,0 +1,65 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Show extracted list of keys from a list of dictionaries
+      ansible.builtin.debug:
+        msg: "{{ chains | map('extract', chains_config) | map(attribute='configs') | flatten | map(attribute='type') | flatten }}"
+      vars:
+        chains: [1, 2]
+        chains_config:
+          1:
+            foo: bar
+            configs:
+              - type: routed
+                version: 0.1
+              - type: bridged
+                version: 0.2
+          2:
+            foo: baz
+            configs:
+              - type: routed
+                version: 1.0
+              - type: bridged
+                version: 1.1
+
+    - name: Display name and description then install
+      ansible.builtin.debug:
+        msg: "{{ apt | flatten }}"
+        # msg: "{{ apt | dict2items(key_name='package', value_name='description') |   }}"
+        # msg: "{{ apt | map(attribute='key') | map(dict2items(key_name='package', value_name='description')) | flatten }}"
+      vars:
+        ppa:
+          neovim:
+            description: Fork of Vim aiming to improve user experience, plugins, and GUIs.
+            source: ppa:neovim-ppa/unstable
+        apt:
+          stow:
+            description: Organizer for /usr/local software packages
+          tmux:
+            description: terminal multiplexer
+          zsh:
+            description: shell with lots of features
+          zsh-common:
+            description: architecture independent files for Zsh
+          git:
+            description: fast, scalable, distributed revision control system
+          git-man:
+            description: fast, scalable, distributed revision control system (manual pages)
+          gh:
+            description: GitHub CLI, GitHub’s official command line tool
+          exa:
+            description: Modern replacement for ls
+          colordiff:
+            description: tool to colorize 'diff' output
+          bat:
+            description: cat(1) clone with syntax highlighting and git integration
+
+# ok: [localhost] => {
+#     "msg": [
+#         "routed",
+#         "bridged",
+#         "routed",
+#         "bridged"
+#     ]
+# }

@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Include packages.yaml into packages var
+      include_vars:
+        file: cli_apps.yml
+        name: packages
+
+    - name: Package sections
+      ansible.builtin.debug:
+        msg: "{{ packages.apt | dict2items | map(attribute='key') | list }}"
+

@@ -1,0 +1,7 @@
+---
+- name: Install CLI applications
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages: "{{ apt | dict2items | map(attribute='key') | list }}"

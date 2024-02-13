@@ -1,0 +1,82 @@
+---
+apt:
+  stow:
+    description: Organizer for /usr/local software packages
+  tmux:
+    description: terminal multiplexer
+  zsh:
+    description: shell with lots of features
+  zsh-common:
+    description: architecture independent files for Zsh
+  git:
+    description: fast, scalable, distributed revision control system
+  git-man:
+    description: fast, scalable, distributed revision control system (manual pages)
+  gh:
+    description: GitHub CLI, GitHub’s official command line tool
+  exa:
+    description: Modern replacement for ls
+  colordiff:
+    description: tool to colorize 'diff' output
+  bat:
+    description: cat(1) clone with syntax highlighting and git integration
+  btop:
+    description: Modern and colorful command line resource monitor that shows usage
+      and stats
+  duf:
+    description: Disk Usage/Free Utility
+  fdupes:
+    description: identifies duplicate files within given directories
+  fzf:
+    description: general-purpose command-line fuzzy finder
+  jdupes:
+    description: identify and delete or link duplicate files
+  kpcli:
+    description: command line interface to KeePassX password manager databases
+  mc:
+    description: Midnight Commander - a powerful file manager
+  mmv:
+    description: Move/Copy/Link multiple files and directories
+  autoconf:
+    description: automatic configure script builder
+  automake:
+    description: Tool for generating GNU Standards-compliant Makefiles
+  build-essential:
+    description: Informational list of build-essential packages
+  cmake:
+    description: cross-platform, open-source make system
+  exuberant-ctags:
+    description: build tag file indexes of source code definitions
+  vim:
+    description: Vi IMproved - enhanced vi editor
+  vim-doc:
+    description: Vi IMproved - HTML documentation
+  entr:
+    description: Run arbitrary commands when files change
+  googler:
+    description: Power tool to Google (Web & News) and Google Site Search from the
+      terminal
+  autossh:
+    description: Automatically restart SSH sessions and tunnels
+  parallel:
+    description: build and execute command lines from standard input in parallel
+  plocate:
+    description: much faster locate
+  procinfo:
+    description: tools to display information from /proc and /sys
+  pv:
+    description: Shell pipeline element to meter data passing through
+  ripgrep:
+    description: Recursively searches directories for a regex pattern
+  sshfs:
+    description: filesystem client based on SSH File Transfer Protocol
+  sshpass:
+    description: Non-interactive ssh password authentication
+  zoxide:
+    description: Faster way to navigate your filesystem
+  curl:
+    description: command line tool for transferring data with URL syntax
+  httpie:
+    description: CLI, cURL-like tool for humans
+  tilix:
+    description: Tiling terminal emulator for GNOME

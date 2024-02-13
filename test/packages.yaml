@@ -1,0 +1,1043 @@
+---
+apt:
+  admin:
+    stow:
+      section: admin
+      origin: Ubuntu:22.04/jammy [all]
+      version: 2.3.1-1
+      dependants_count: '0'
+      description: Organizer for /usr/local software packages
+    tmux:
+      section: admin
+      origin: Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [amd64]
+      version: 3.2a-4ubuntu0.2
+      dependants_count: '0'
+      description: terminal multiplexer
+    vagrant:
+      section: admin
+      origin: Ubuntu:22.04/jammy [all]
+      version: 2.2.19+dfsg-1ubuntu1
+      dependants_count: '2'
+      description: Tool for building and distributing virtualized development environments
+  devel:
+    astyle:
+      section: devel
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 3.1-2build1
+      dependants_count: '0'
+      description: Source code indenter for C, C++, Objective-C, C#, and Java
+    cscope:
+      section: devel
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 15.9-1
+      dependants_count: '0'
+      description: interactively examine a C program source
+    yamllint:
+      section: devel
+      origin: Ubuntu:22.04/jammy [all]
+      version: 1.26.3-1
+      dependants_count: '1'
+      description: Linter for YAML files
+  editors:
+    exuberant-ctags:
+      section: editors
+      origin: Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [amd64]
+      version: 1:5.9~svn20110310-16ubuntu0.22.04.1
+      dependants_count: '0'
+      description: build tag file indexes of source code definitions
+    vim-scripts:
+      section: editors
+      origin: Ubuntu:22.04/jammy [all]
+      version: '20210124.2'
+      dependants_count: '0'
+      description: plugins for vim, adding bells and whistles
+  education:
+    scratch:
+      section: education
+      origin: Ubuntu:22.04/jammy [all]
+      version: 1.4.0.6~dfsg1-6.1
+      dependants_count: '0'
+      description: easy to use programming environment for ages 8 and up
+  electronics:
+    scantool:
+      section: electronics
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 2.1-2.1build1
+      dependants_count: '0'
+      description: OBD-II vehicle diagnostic scanner
+    sigrok:
+      section: electronics
+      origin: Ubuntu:22.04/jammy [all]
+      version: 0.2-5
+      dependants_count: '0'
+      description: Logic analyzer and protocol decoder software suite (metapackage)
+  fonts:
+    fonts-dejavu-extra:
+      section: fonts
+      origin: Ubuntu:22.04/jammy [all]
+      version: 2.37-2build1
+      dependants_count: '2'
+      description: Vera font family derivate with additional characters (extra variants)
+    fonts-ipafont-gothic:
+      section: fonts
+      origin: Ubuntu:22.04/jammy [all]
+      version: 00303-21ubuntu1
+      dependants_count: '1'
+      description: Japanese OpenType font set, IPA Gothic and IPA P Gothic Fonts
+    fonts-wine:
+      section: fonts
+      origin: Ubuntu:22.04/jammy [all]
+      version: 6.0.3~repack-1
+      dependants_count: '0'
+      description: Windows API implementation - fonts
+  games:
+    cowsay:
+      section: games
+      origin: Ubuntu:22.04/jammy [all]
+      version: 3.03+dfsg2-8
+      dependants_count: '0'
+      description: configurable talking cow
+  gnome:
+    cheese:
+      section: gnome
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 41.1-1build1
+      dependants_count: '0'
+      description: tool to take pictures and videos from your webcam
+    gnome-shell-pomodoro:
+      section: gnome
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 0.20.0-3
+      dependants_count: '0'
+      description: GNOME Shell time-management app
+    nemo-image-converter:
+      section: gnome
+      origin: linuxmint:21.1/vera [amd64]
+      version: 5.6.0+vera
+      dependants_count: '0'
+      description: nemo extension to mass resize or rotate images
+    tilix:
+      section: gnome
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 1.9.4-2build1
+      dependants_count: '3'
+      description: Tiling terminal emulator for GNOME
+  utils:
+    xclip:
+      section: x11
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 0.13-2
+      dependants_count: '0'
+      description: command line interface to X selections
+    xterm:
+      section: x11
+      origin: Ubuntu:22.04/jammy [amd64]
+      version: 372-1ubuntu1
+      dependants_count: '7'
+      description: X terminal emulator
+ppa:
+  neovim:
+    section: editors
+    origin: Neovim Unstable:22.04/jammy [amd64]
+    version: 0.9.0~ubuntu1+git202303312025-83bfd94d1-333b5866f-313b5873c~ubuntu22.04.1
+    dependants_count: '1'
+    description: Fork of Vim aiming to improve user experience, plugins, and GUIs.
+    source: ppa:neovim-ppa/unstable
+  noson-app:
+    section: misc
+    origin: noson-app:22.04/jammy [amd64]
+    version: 5.4~202302011756~ubuntu22.04.1
+    dependants_count: '0'
+    description: SONOS controller for Linux
+    source: ppa:jlbarriere68/noson-app
+  openrazer-daemon:
+    section: misc
+    origin: Stable Branch:22.04/jammy [all]
+    version: 3.5.1~ubuntu22.04.1
+    dependants_count: '2'
+    description: OpenRazer peripheral drivers (daemon)
+    source: ppa:openrazer/stable
+  openrazer-meta:
+    section: misc
+    origin: Stable Branch:22.04/jammy [all]
+    version: 3.5.1~ubuntu22.04.1
+    dependants_count: '0'
+    description: OpenRazer peripheral drivers (metapackage)
+    source: ppa:openrazer/stable
+  alacritty:
+    section: rust
+    origin: PPA:22.04/jammy [amd64]
+    version: 0.12.0+1-20230325T020301~jammy-2df8f860
+    dependants_count: '0'
+    description: GPU-accelerated terminal emulator
+    source: ppa:aslatter/ppa
+  papirus-icon-theme:
+    section: x11
+    origin: papirus:22.04/jammy [all]
+    version: 20230301-6148+pkg22~ubuntu22.04.1
+    dependants_count: '0'
+    description: Papirus Icon Theme
+    source: ppa:papirus/papirus
+  polychromatic:
+    section: x11
+    origin: Release / Stable:22.04/jammy [all]
+    version: 0.8.0
+    dependants_count: '0'
+    description: RGB lighting utility (metapackage)
+    source: ppa:polychromatic/stable
+  polychromatic-cli:
+    section: x11
+    origin: Release / Stable:22.04/jammy [all]
+    version: 0.8.0
+    dependants_count: '1'
+    description: RGB lighting utility (CLI interface)
+    source: ppa:polychromatic/stable
+  polychromatic-common:
+    section: x11
+    origin: Release / Stable:22.04/jammy [all]
+    version: 0.8.0
+    dependants_count: '4'
+    description: RGB lighting utility (common files)
+    source: ppa:polychromatic/stable
+  polychromatic-controller:
+    section: x11
+    origin: Release / Stable:22.04/jammy [all]
+    version: 0.8.0
+    dependants_count: '1'
+    description: RGB lighting utility (Qt interface)
+    source: ppa:polychromatic/stable
+  polychromatic-tray-applet:
+    section: x11
+    origin: Release / Stable:22.04/jammy [all]
+    version: 0.8.0
+    dependants_count: '1'
+    description: RGB lighting utility (Indicator applet)
+    source: ppa:polychromatic/stable
+3rd_party:
+  brscan-skey:
+    section: brother
+    origin: "(installed locally)"
+    version: 0.3.1-2
+    dependants_count: '0'
+    description: Brother Linux scanner S-KEY tool
+    source: "/var/lib/dpkg/status"
+  gh:
+    section: devel
+    origin: gh:cli.github.com [amd64]
+    version: 2.14.7
+    dependants_count: '0'
+    description: GitHub’s official command line tool.
+    source: https://cli.github.com/packages focal/main amd64 Packages
+  steam-launcher:
+    section: games
+    origin: Steam launcher:repo.steampowered.com [all]
+    version: 1:1.0.0.75
+    dependants_count: '0'
+    description: Launcher for the Steam software distribution service
+    source: https://repo.steampowered.com/steam stable/steam amd64 Packages
+  ancestris:
+    section: misc
+    origin: "(installed locally)"
+    version: 11-20211017-0-0ubuntu1
+    dependants_count: '0'
+    description: Genealogy Program - Programme de gestion de données généalogiques
+    source: "/var/lib/dpkg/status"
+  osquery:
+    section: misc
+    origin: "(installed locally)"
+    version: 4.9.0-1.linux
+    dependants_count: '0'
+    description: osquery is an operating system instrumentation toolchain.
+    source: "/var/lib/dpkg/status"
+  slack-desktop:
+    section: misc
+    origin: slack:1/jessie [amd64]
+    version: 4.29.149
+    dependants_count: '0'
+    description: Slack Desktop
+    source: https://packagecloud.io/slacktechnologies/slack/debian jessie/main amd64
+      Packages
+  syncthing:
+    section: misc
+    origin: Syncthing:syncthing [amd64]
+    version: 1.23.2
+    dependants_count: '0'
+    description: Open Source Continuous File Synchronization
+    source: https://apt.syncthing.net syncthing/stable amd64 Packages
+  teamviewer:
+    section: net
+    origin: TeamViewer:stable [amd64]
+    version: 15.40.8
+    dependants_count: '0'
+    description: Remote control and meeting solution.
+    source: https://linux.teamviewer.com/deb stable/main amd64 Packages
+  ckan:
+    section: utils
+    origin: "(installed locally)"
+    version: 1.26.4
+    dependants_count: '0'
+    description: KSP-CKAN official client.
+    source: "/var/lib/dpkg/status"
+  google-chrome-beta:
+    section: web
+    origin: Google:1.0/stable [amd64]
+    version: 112.0.5615.49-1
+    dependants_count: '1'
+    description: The web browser from Google
+    source: http://dl.google.com/linux/chrome/deb stable/main amd64 Packages
+  google-chrome-stable:
+    section: web
+    origin: Google:1.0/stable [amd64]
+    version: 111.0.5563.146-1
+    dependants_count: '1'
+    description: The web browser from Google
+    source: http://dl.google.com/linux/chrome/deb stable/main amd64 Packages
+flatpak:
+  Amberol:
+    version: 0.9.2
+    app_id: io.bassi.Amberol
+    description: Plays music, and nothing else
+  SaveDesktop:
+    version: '2.0'
+    app_id: io.github.vikdevelop.SaveDesktop
+    description: Save the current configuration of your desktop environment
+  mpv:
+    version: 0.35.1
+    app_id: io.mpv.Mpv
+    description: A free, open source, and cross-platform media player
+gems:
+  amazing_print:
+    version: 1.4.0
+    description: Pretty print Ruby objects with proper indentation and colors
+  ast:
+    version: 2.4.2
+    description: A library for working with Abstract Syntax Trees.
+  backport:
+    version: 1.2.0
+    description: A pure Ruby library for event-driven IO
+  benchmark:
+    version: 0.2.1
+    description: a performance benchmarking library
+  bundler:
+    version: 2.3.22
+    description: The best way to manage your application's dependencies
+  bundler-leak:
+    version: 0.3.0
+    description: Memory leaks verification for Bundler
+  caliber:
+    version: 0.20.0
+    description: Provides a high quality style guide and configuration for your projects.
+  caxlsx:
+    version: 3.3.0
+    description: Excel OOXML (xlsx) with charts, styles, images and autowidth columns.
+  coderay:
+    version: 1.1.3
+    description: Fast syntax highlighting for selected languages.
+  cogger:
+    version: 0.4.0
+    description: Decorates native logging with colorized output.
+  concurrent-ruby:
+    version: 1.1.10
+    description: Modern concurrency tools for Ruby. Inspired by Erlang, Clojure, Scala,
+      Haskell, F#, C#, Java, and classic concurrency patterns.
+  debug:
+    version: 1.7.1
+    description: Debugging functionality for Ruby
+  diff-lcs:
+    version: 1.5.0
+    description: Diff::LCS computes the difference between two Enumerable sequences
+      using the McIlroy-Hunt longest common subsequence (LCS) algorithm
+  docile:
+    version: 1.4.0
+    description: Docile keeps your Ruby DSLs tame and well-behaved.
+  dry-container:
+    version: 0.11.0
+    description: A simple, configurable object container implemented in Ruby
+  dry-core:
+    version: 1.0.0
+    description: A toolset of small support modules used throughout the dry-rb ecosystem
+  dry-monads:
+    version: 1.6.0
+    description: Common monads for Ruby
+  e2mmap:
+    version: 0.1.0
+    description: Module for defining custom exceptions with specific messages.
+  ffi:
+    version: 1.15.5
+    description: Ruby FFI
+  formatador:
+    version: 1.1.0
+    description: Ruby STDOUT text formatting
+  git-lint:
+    version: 4.6.0
+    description: A command line interface for linting Git commits.
+  git_plus:
+    version: 1.7.1
+    description: Provides an Object API around Git.
+  guard:
+    version: 2.18.0
+    description: Guard keeps an eye on your file modifications
+  guard-compat:
+    version: 1.2.1
+    description: Tools for developing Guard compatible plugins
+  guard-rspec:
+    version: 4.7.3
+    description: Guard gem for RSpec
+  htmlentities:
+    version: 4.3.4
+    description: Encode/decode HTML entities
+  infusible:
+    version: 0.2.0
+    description: Automates the injection of dependencies into your class.
+  io-console:
+    version: 0.6.0
+    description: Console interface
+  irb:
+    version: 1.6.2
+    description: Interactive Ruby command-line tool for REPL (Read Eval Print Loop).
+  jaro_winkler:
+    version: 1.5.4
+    description: An implementation of Jaro-Winkler distance algorithm written \ in
+      C extension which supports any kind of string encoding.
+  json:
+    version: 2.6.3
+    description: JSON Implementation for Ruby
+  kramdown:
+    version: 2.4.0
+    description: kramdown is a fast, pure-Ruby Markdown-superset converter.
+  kramdown-parser-gfm:
+    version: 1.1.0
+    description: kramdown-parser-gfm provides a kramdown parser for the GFM dialect
+      of Markdown
+  kwalify:
+    version: 0.7.2
+    description: a parser, schema validator, and data-binding tool for YAML and JSON.
+  listen:
+    version: 3.7.1
+    description: Listen to file modifications
+  lumberjack:
+    version: 1.2.8
+    description: A simple, powerful, and very fast logging utility that can be a drop
+      in replacement for Logger or ActiveSupport::BufferedLogger.
+  marameters:
+    version: 0.10.0
+    description: Provides dynamic method parameter construction and deconstruction.
+  marcel:
+    version: 1.0.2
+    description: Simple mime type detection using magic numbers, filenames, and extensions
+  method_source:
+    version: 1.0.0
+    description: retrieve the sourcecode for a method
+  micromachine:
+    version: 3.0.0
+    description: Minimal Finite State Machine.
+  nenv:
+    version: 0.3.0
+    description: Convenience wrapper for Ruby's ENV
+  nokogiri:
+    version: 1.13.10
+    description: Nokogiri (鋸) makes it easy and painless to work with XML and HTML
+      from Ruby.
+  notiffany:
+    version: 0.1.3
+    description: Notifier library (extracted from Guard project)
+  parallel:
+    version: 1.22.1
+    description: Run any kind of code in parallel processes
+  parser:
+    version: 3.1.3.0
+    description: A Ruby parser written in pure Ruby.
+  pastel:
+    version: 0.8.0
+    description: Terminal strings styling with intuitive and clean API.
+  pry:
+    version: 0.14.1
+    description: A runtime developer console and IRB alternative with powerful introspection
+      capabilities.
+  pry-nav:
+    version: 1.0.0
+    description: Simple execution navigation for Pry.
+  qp:
+    version: 0.0.1
+    description: Query manually installed Ubuntu packages
+  racc:
+    version: 1.6.2
+    description: Racc is a LALR(1) parser generator
+  rainbow:
+    version: 3.1.1
+    description: Colorize printed text on ANSI terminals
+  rake:
+    version: 13.0.6
+    description: Rake is a Make-like program implemented in Ruby
+  rb-fsevent:
+    version: 0.11.2
+    description: Very simple & usable FSEvents API
+  rb-inotify:
+    version: 0.10.1
+    description: A Ruby wrapper for Linux inotify, using FFI
+  reek:
+    version: 6.1.2
+    description: Code smell detector for Ruby
+  refinements:
+    version: 9.8.0
+    description: A collection of refinements to core Ruby objects.
+  regexp_parser:
+    version: 2.6.1
+    description: Scanner, lexer, parser for ruby's regular expressions
+  reline:
+    version: 0.3.2
+    description: Alternative GNU Readline or Editline implementation by pure Ruby.
+  reverse_markdown:
+    version: 2.1.1
+    description: Convert html code into markdown.
+  rexml:
+    version: 3.2.5
+    description: An XML toolkit for Ruby
+  rspec:
+    version: 3.12.0
+    description: rspec-3.12.0
+  rspec-core:
+    version: 3.12.0
+    description: rspec-core-3.12.0
+  rspec-expectations:
+    version: 3.12.1
+    description: rspec-expectations-3.12.1
+  rspec-mocks:
+    version: 3.12.1
+    description: rspec-mocks-3.12.1
+  rspec-support:
+    version: 3.12.0
+    description: rspec-support-3.12.0
+  rubocop:
+    version: 1.41.1
+    description: Automatic Ruby code style checking tool.
+  rubocop-ast:
+    version: 1.24.0
+    description: RuboCop tools to deal with Ruby code AST.
+  rubocop-performance:
+    version: 1.15.2
+    description: Automatic performance checking tool for Ruby code.
+  rubocop-rake:
+    version: 0.6.0
+    description: A RuboCop plugin for Rake
+  rubocop-rspec:
+    version: 2.16.0
+    description: Code style checking for RSpec files
+  rubocop-thread_safety:
+    version: 0.4.4
+    description: Thread-safety checks via static analysis
+  ruby-progressbar:
+    version: 1.11.0
+    description: Ruby/ProgressBar is a flexible text progress bar library for Ruby.
+  rubyzip:
+    version: 2.3.2
+    description: rubyzip is a ruby module for reading and writing zip files
+  runcom:
+    version: 8.7.0
+    description: An XDG enhanced run command manager for command line interfaces.
+  shellany:
+    version: 0.0.1
+    description: Simple, somewhat portable command capturing
+  simplecov:
+    version: 0.22.0
+    description: Code coverage for Ruby
+  simplecov-html:
+    version: 0.12.3
+    description: Default HTML formatter for SimpleCov code coverage tool for ruby
+      2.4+
+  simplecov_json_formatter:
+    version: 0.1.4
+    description: JSON formatter for SimpleCov
+  solargraph:
+    version: 0.48.0
+    description: A Ruby language server
+  spek:
+    version: 0.6.0
+    description: Enhances gem specifications with additional information and tooling.
+  thor:
+    version: 1.2.1
+    description: Thor is a toolkit for building powerful command-line interfaces.
+  tilt:
+    version: 2.0.11
+    description: Generic interface to multiple Ruby template engines
+  tty-color:
+    version: 0.6.0
+    description: Terminal color capabilities detection
+  unicode-display_width:
+    version: 2.3.0
+    description: Determines the monospace display width of a string in Ruby.
+  versionaire:
+    version: 10.6.0
+    description: Provides an immutable, thread-safe, and semantic version type.
+  webrick:
+    version: 1.7.0
+    description: HTTP server toolkit
+  xdg:
+    version: 6.6.2
+    description: Provides an implementation of the XDG Base Directory Specification.
+  yard:
+    version: 0.9.28
+    description: Documentation tool for consistent and usable documentation in Ruby.
+  zeitwerk:
+    version: 2.6.6
+    description: Efficient and thread-safe constant autoloader
+pip:
+  ansible-base:
+    version: 2.10.8
+    description: Radically simple IT automation
+  ansible-lint:
+    version: 5.4.0
+    description: Checks playbooks for practices and behaviour that could potentially
+      be improved
+  beautifulsoup4:
+    version: 4.10.0
+    description: Screen-scraping library
+  blinker:
+    version: '1.4'
+    description: Fast, simple object-to-object and broadcast signaling
+  charset-normalizer:
+    version: 2.0.6
+    description: The Real First Universal Charset Detector. Open, modern and actively
+      maintained alternative to Chardet.
+  click:
+    version: 8.0.3
+    description: Composable command line interface toolkit
+  colorama:
+    version: 0.4.4
+    description: Cross-platform colored terminal text.
+  colour:
+    version: 0.1.5
+    description: converts and manipulates various color representation (HSL, RVB,
+      web, X11, ...)
+  cupshelpers:
+    version: '1.0'
+    description: Helper functions and classes for using CUPS
+  daemonize:
+    version: 2.5.0
+    description: Library to enable your code run as a daemon process on Unix-like
+      systems.
+  distro:
+    version: 1.7.0
+    description: Distro - an OS platform information API
+  docopt:
+    version: 0.6.2
+    description: Pythonic argument parser, that will make you smile
+  duplicity:
+    version: 0.8.21
+    description: Encrypted backup using rsync algorithm
+  enrich:
+    version: 1.2.6
+    description: enrich
+  evdev:
+    version: 1.4.0
+    description: Bindings to the Linux input handling subsystem
+  fasteners:
+    version: 0.14.1
+    description: A python package that provides useful locks.
+  feedparser:
+    version: 6.0.8
+    description: Universal feed parser, handles RSS 0.9x, RSS 1.0, RSS 2.0, CDF, Atom
+      0.3, and Atom 1.0 feeds
+  filelock:
+    version: 3.6.0
+    description: A platform independent file lock.
+  gpg:
+    version: 1.16.0-unknown
+    description: Python bindings to the GPGME API of the GnuPG cryptography library.
+  gramps:
+    version: 5.1.5
+    description: Gramps (Genealogical Research and Analysis Management Programming
+      System)
+  greenlet:
+    version: 1.1.2
+    description: Lightweight in-process concurrent programming
+  grip:
+    version: 4.6.1
+    description: Render local readme files before sending off to GitHub.
+  gyp:
+    version: '0.1'
+    description: Generate Your Projects
+  html2text:
+    version: 2020.1.16
+    description: Turn HTML into equivalent Markdown-structured text.
+  html5-parser:
+    version: 0.4.10
+    description: Fast C based HTML 5 parsing for python
+  httpie:
+    version: 2.6.0
+    description: 'HTTPie: command-line HTTP client for the API era.'
+  idna:
+    version: '3.3'
+    description: Internationalized Domain Names in Applications (IDNA)
+  ifaddr:
+    version: 0.1.7
+    description: Cross-platform network interface and IP address enumeration library
+  IMDbPY:
+    version: 2021.4.18
+    description: Python package to access the IMDb's database
+  img2pdf:
+    version: 0.4.2
+    description: Convert images to PDF via direct JPEG inclusion.
+  iotop:
+    version: '0.6'
+    description: Per process I/O bandwidth monitor
+  itsdangerous:
+    version: 2.1.0
+    description: Safely pass data to untrusted environments and back.
+  jeepney:
+    version: 0.7.1
+    description: Low-level, pure Python DBus protocol wrapper.
+  Jinja2:
+    version: 3.0.3
+    description: A very fast and expressive template engine.
+  jmespath:
+    version: 0.10.0
+    description: JSON Matching Expressions
+  jsonschema:
+    version: 3.2.0
+    description: An implementation of JSON Schema validation for Python
+  keyring:
+    version: 23.5.0
+    description: Store and access your passwords safely.
+  macaroonbakery:
+    version: 1.3.1
+    description: A Python library port for bakery, higher level operation to work
+      with macaroons
+  Mako:
+    version: 1.1.3
+    description: A super-fast templating language that borrows the  best ideas from
+      the existing templating languages.
+  Markdown:
+    version: 3.3.6
+    description: Python implementation of Markdown.
+  MarkupSafe:
+    version: 2.0.1
+    description: Safely add untrusted strings to HTML/XML markup.
+  meld:
+    version: 3.20.4
+    description: Visual diff and merge tool
+  monotonic:
+    version: '1.6'
+    description: An implementation of time.monotonic() for Python 2 & < 3.3
+  more-itertools:
+    version: 8.10.0
+    description: More routines for operating on iterables, beyond itertools
+  msgpack:
+    version: 1.0.3
+    description: MessagePack (de)serializer.
+  mutagen:
+    version: 1.46.0
+    description: read and write audio tags for many formats
+  nemo-emblems:
+    version: 5.6.0
+    description: Change your folder and file emblems
+  netaddr:
+    version: 0.8.0
+    description: A network address manipulation library for Python
+  netifaces:
+    version: 0.11.0
+    description: Portable network interface information.
+  networkx:
+    version: 2.8.7
+    description: Python package for creating and manipulating graphs and networks
+  notify2:
+    version: '0.3'
+    description: Python interface to DBus notifications
+  ntlm-auth:
+    version: 1.4.0
+    description: Creates NTLM authentication structures
+  numpy:
+    version: 1.21.5
+    description: NumPy is the fundamental package for array computing with Python.
+  oauthlib:
+    version: 3.2.0
+    description: A generic, spec-compliant, thorough implementation of the OAuth request-signing
+      logic
+  path-and-address:
+    version: 2.0.1
+    description: Functions for server command-line arguments used by humans.
+  pathspec:
+    version: 0.9.0
+    description: Utility library for gitignore style pattern matching of file paths.
+  pbr:
+    version: 5.8.0
+    description: Python Build Reasonableness
+  pdfarranger:
+    version: 1.8.2
+    description: A simple application for PDF Merging, Rearranging, and Splitting
+  pikepdf:
+    version: 5.0.1+dfsg
+    description: Read and write PDFs with Python, powered by qpdf
+  Pillow:
+    version: 9.0.1
+    description: Python Imaging Library (Fork)
+  protobuf:
+    version: 3.12.4
+    description: Protocol Buffers
+  psutil:
+    version: 5.9.0
+    description: Cross-platform lib for process and system monitoring in Python.
+  rich:
+    version: 11.2.0
+    description: Render rich text, tables, progress bars, syntax highlighting, markdown
+      and more to the terminal
+  screen-resolution-extra:
+    version: 0.0.0
+    description: Extension for the GNOME Screen Resolution applet
+  toml:
+    version: 0.10.2
+    description: Python Library for Tom's Obvious, Minimal Language
+  trash-cli:
+    version: 0.17.1.14
+    description: Command line interface to FreeDesktop.org Trash.
+  ufw:
+    version: 0.36.1
+    description: front-end for Linux firewalling
+  wadllib:
+    version: 1.3.6
+    description: Navigate HTTP resources using WADL files as guides.
+  wcmatch:
+    version: '8.3'
+    description: Wildcard/glob file name matcher.
+  webencodings:
+    version: 0.5.1
+    description: Character encoding aliases for legacy web content
+  xmltodict:
+    version: 0.12.0
+    description: Makes working with XML feel like you are working with JSON
+  yamllint:
+    version: 1.26.3
+    description: A linter for YAML files.
+  youtube-dl:
+    version: 2021.12.17
+    description: YouTube video downloader
+  yq:
+    version: 3.1.0
+    description: Command-line YAML/XML processor - jq wrapper for YAML/XML documents
+  yt-dlp:
+    version: 2023.3.4
+    description: A youtube-dl fork with additional features and patches
+  zeroconf:
+    version: 0.38.3
+    description: Pure Python Multicast DNS Service Discovery Library (Bonjour/Avahi
+      compatible)
+  zipp:
+    version: 1.0.0
+    description: Backport of pathlib-compatible object wrapper for zip files
+snap:
+  atom:
+    description: A hackable text editor for the 21st Century.
+    url: https://snapcraft.io/atom
+    version: 1.60.0            (286) 298MB classic
+  bare:
+    description: Empty base snap, useful for testing and fully statically linked
+    url: https://snapcraft.io/bare
+    version: 1.0            (5) 4kB base
+  barrier:
+    description: Barrier - Share mouse and keyboard over the local network
+    url: https://snapcraft.io/barrier
+    version: 2.4.0-4-gac5a1bfd            (682) 57MB -
+  baugeschichte:
+    description: See images and the history of builings in a city
+    url: https://snapcraft.io/baugeschichte
+    version: 2.0.2.7            (12) 67MB -
+  blender:
+    description: Blender is the free and open source 3D creation suite.
+    url: https://snapcraft.io/blender
+    version: 3.5.0              (3486) 315MB classic
+  btop:
+    description: Resource monitor that shows usage and stats
+    url: https://snapcraft.io/btop
+    version: 1.2.13            (598) 1MB -
+  buka:
+    description: EBook Management and Reader
+    url: https://snapcraft.io/buka
+    version: 1.0.0            (2) 91MB -
+  chromium:
+    description: Chromium web browser, open-source version of Chrome
+    url: https://snapcraft.io/chromium
+    version: 111.0.5563.146            (2415) 155MB -
+  core:
+    description: snapd runtime environment
+    url: https://snapcraft.io/core
+    version: 16-2.58.3            (14946) 122MB core
+  core18:
+    description: Runtime environment based on Ubuntu 18.04
+    url: https://snapcraft.io/core18
+    version: 20230320            (2721) 58MB base
+  core20:
+    description: Runtime environment based on Ubuntu 20.04
+    url: https://snapcraft.io/core20
+    version: 20230308            (1852) 66MB base
+  core22:
+    description: Runtime environment based on Ubuntu 22.04
+    url: https://snapcraft.io/core22
+    version: 20230316            (583) 76MB base
+  cups:
+    description: The CUPS Snap - The Printing Stack for Linux
+    url: https://snapcraft.io/cups
+    version: 2.4.2-5            (872) 57MB -
+  discord:
+    description: All-in-one voice and text chat for gamers
+    url: https://snapcraft.io/discord
+    version: 0.0.25            (150) 85MB -
+  disk-space-saver:
+    description: Disk Space Analyzer that saves hundreds of gigabytes!
+    url: https://snapcraft.io/disk-space-saver
+    version: 2.6.1            (41) 81MB -
+  foliate:
+    description: A simple and modern eBook viewer
+    url: https://snapcraft.io/foliate
+    version: 2.6.3            (1167) 16MB -
+  fontpreview:
+    description: fontpreview lets you quickly search for fonts and preview them
+    url: https://snapcraft.io/fontpreview
+    version: 1.0.6             (56) 40MB -
+  fromscratch:
+    description: FromScratch
+    url: https://snapcraft.io/fromscratch
+    version: 1.4.3            (4) 128MB -
+  gitter-desktop:
+    description: Where developers come to talk
+    url: https://snapcraft.io/gitter-desktop
+    version: 5.0.1            (107) 112MB -
+  gnome-3-26-1604:
+    description: Shared GNOME 3.26 runtime for Ubuntu 16.04 base
+    url: https://snapcraft.io/gnome-3-26-1604
+    version: 3.26.0.20210629            (104) 147MB -
+  gnome-3-28-1804:
+    description: Shared GNOME 3.28 runtime for Ubuntu 18.04
+    url: https://snapcraft.io/gnome-3-28-1804
+    version: 3.28.0-19-g98f9e67.98f9e67            (161) 172MB -
+  gnome-3-34-1804:
+    description: Shared GNOME 3.34 Ubuntu stack
+    url: https://snapcraft.io/gnome-3-34-1804
+    version: 0+git.3556cb3            (77) 229MB -
+  gnome-3-38-2004:
+    description: Shared GNOME 3.38 Ubuntu stack
+    url: https://snapcraft.io/gnome-3-38-2004
+    version: 0+git.6f39565            (137) 366MB -
+  gnome-42-2204:
+    description: Shared GNOME 42 Ubuntu stack
+    url: https://snapcraft.io/gnome-42-2204
+    version: 0+git.09673a5            (65) 482MB -
+  gotop:
+    description: A top like command line tool with Terminal UI
+    url: https://snapcraft.io/gotop
+    version: 0.1.1            (3) 2MB -
+  gtk-common-themes:
+    description: All the (common) themes
+    url: https://snapcraft.io/gtk-common-themes
+    version: 0.1-81-g442e511            (1535) 96MB -
+  kanagame:
+    description: A simple flashcard based game for learning kana.
+    url: https://snapcraft.io/kanagame
+    version: 0.2            (21) 109MB -
+  kde-frameworks-5-core18:
+    description: KDE Frameworks 5
+    url: https://snapcraft.io/kde-frameworks-5-core18
+    version: 5.67.0            (35) 303MB -
+  kde-frameworks-5-qt-5-14-core18:
+    description: KDE Frameworks 5
+    url: https://snapcraft.io/kde-frameworks-5-qt-5-14-core18
+    version: 5.68.0            (4) 304MB -
+  kotlin:
+    description: Command line Kotlin compiler
+    url: https://snapcraft.io/kotlin
+    version: 1.7.21            (73) 121MB classic
+  pdfmixtool:
+    description: An application to perform common editing operations on PDF files
+    url: https://snapcraft.io/pdfmixtool
+    version: 1.0.1            (864)   9MB -
+  pdftk:
+    description: command-line tool for working with PDF files
+    url: https://snapcraft.io/pdftk
+    version: 2.02-4             (9) 18MB -
+  peruse:
+    description: Comic Book Reader
+    url: https://snapcraft.io/peruse
+    version: 1.2                       (13) 512kB -
+  pycharm-educational:
+    description: Easy and Professional Tool to Learn & Teach Programming with Python
+    url: https://snapcraft.io/pycharm-educational
+    version: 2022.2.2            (57) 572MB classic
+  qt551:
+    description: Qt 5 full runtime stack content snap from official core18 repos
+    url: https://snapcraft.io/qt551
+    version: 5.x-core18            (42) 271MB -
+  qt5-core20:
+    description: Qt5 runtime for core20
+    url: https://snapcraft.io/qt5-core20
+    version: 20.04            (15) 316MB -
+  qt5-core22:
+    description: Qt5 runtime for core22
+    url: https://snapcraft.io/qt5-core22
+    version: 22.04            (4) 223MB -
+  remarkable:
+    description: Remarkable editor
+    url: https://snapcraft.io/remarkable
+    version: 0+git.6f21d49            (5) 125MB -
+  remmina:
+    description: Remote Desktop Client
+    url: https://snapcraft.io/remmina
+    version: v1.4.29                            (5597) 160MB -
+  rpi-imager:
+    description: Raspberry Pi Imager
+    url: https://snapcraft.io/rpi-imager
+    version: 1.7.3            (371) 215MB -
+  scc:
+    description: scc is a very fast & accurate code counter counting lines of code
+      by
+    url: https://snapcraft.io/scc
+    version: v3.1.0            (17) 1MB -
+  skype:
+    description: One Skype for all your devices. New features. New look. All Skype.
+    url: https://snapcraft.io/skype
+    version: 8.96.0.207             (263) 146MB -
+  snap-store:
+    description: Snap Store is a graphical desktop application for discovering,
+    url: https://snapcraft.io/snap-store
+    version: 41.3-66-gfe1e325            (638) 48MB -
+  stellarium-plars:
+    description: Free, open source planetarium software
+    url: https://snapcraft.io/stellarium-plars
+    version: 0.21.0            (101) 324MB -
+  sublime-text:
+    description: A sophisticated text editor for code, markup and prose.
+    url: https://snapcraft.io/sublime-text
+    version: 4143            (118) 68MB classic
+  sweethome3d-homedesign:
+    description: An interior design application to draw house plans & arrange
+    url: https://snapcraft.io/sweethome3d-homedesign
+    version: 6.6            (15) 140MB -
+  syncthing:
+    description: Open Source Continuous File Synchronization
+    url: https://snapcraft.io/syncthing
+    version: 1.4.2            (501) 7MB -
+  taskbook:
+    description: Tasks, boards & notes for the command-line habitat
+    url: https://snapcraft.io/taskbook
+    version: 0.3.0            (23) 27MB -
+  tor:
+    description: Anonymising TCP overlay network
+    version: 0.2.9.17 (2) 6MB -
+  wavebox:
+    description: Wavebox
+    url: https://snapcraft.io/wavebox
+    version: 4.11.11            (193) 162MB -
+  wekan:
+    description: The open-source kanban
+    url: https://snapcraft.io/wekan
+    version: 6.09            (1999) 167MB -
+  wonderwall:
+    description: Powerful Desktop Wallpaper manager for Linux Desktop
+    url: https://snapcraft.io/wonderwall
+    version: 7            (39) 2MB -
+  youtube-dl:
+    description: Download videos from youtube.com or other video platforms
+    url: https://snapcraft.io/youtube-dl
+    version: 2021.12.17+git01bf89e            (4806) 97MB -
+  zenkit:
+    description: Track projects, organize collections, or brainstorm new ideas with
+    url: https://snapcraft.io/zenkit
+    version: 2.1.8            (17) 65MB -

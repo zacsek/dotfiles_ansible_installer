@@ -1,0 +1,53 @@
+---
+asdf:
+  - plugin: rust
+    repo: https://github.com/code-lever/asdf-rust.git
+  - plugin: ruby
+    repo: https://github.com/asdf-vm/asdf-ruby.git
+    dependencies:
+      - autoconf
+      - build-essential
+      - libdb-dev
+      - libffi-dev
+      - libgdbm-dev
+      - libgdbm6
+      - libgmp-dev
+      - libncurses5-dev
+      - libreadline6-dev
+      - libssl-dev
+      - libyaml-dev
+      - patch
+      - rustc
+      - uuid-dev
+      - zlib1g-dev
+  - plugin: lazygit
+    repo: https://github.com/nklmilojevic/asdf-lazygit.git
+    dependencies:
+      - bash
+      - curl
+      - tar
+  - plugin: python
+    repo: https://github.com/asdf-community/asdf-python.git
+    dependencies:
+      - build-essential
+      - curl
+      - libbz2-dev
+      - libffi-dev
+      - liblzma-dev
+      - libncursesw5-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - libssl-dev
+      - libxml2-dev
+      - libxmlsec1-dev
+      - tk-dev
+      - xz-utils
+      - zlib1g-dev
+  - plugin: terraform
+    repo: https://github.com/asdf-community/asdf-hashicorp.git
+  # - plugin: vault
+  #   repo: https://github.com/asdf-community/asdf-hashicorp.git
+  # - plugin: packer
+  #   repo: https://github.com/asdf-community/asdf-hashicorp.git
+  # - plugin: consul
+  #   repo: https://github.com/asdf-community/asdf-hashicorp.git

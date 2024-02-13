@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Include asdf_dependencies.yaml
+      include_vars:
+        file: asdf_dependencies.yml
+
+    - name: Dependencies
+      ansible.builtin.debug:
+        msg: "{{ asdf | map(attribute='dependencies') | select('defined') | flatten | unique | sort }}"
+
