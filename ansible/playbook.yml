@@ -7,9 +7,18 @@
         ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os-release') }}"
 
   tasks:
-    # - include_role: 
-    #     name: install_nerdfont
-    # - include_role:
-    #     name: install_packages
-    - include_role:
+    - name: Install NERDFonts
+      include_role:
+        name: install_nerdfont
+
+    - name: Install essential CLI apps
+      include_role:
+        name: install_cli_apps
+
+    - name: Install dotfiles, neovim
+      include_role:
+        name: install_dotfiles
+
+    - name: Install ASDF, asdf plugins, and latest Ruby
+      include_role:
         name: install_asdf

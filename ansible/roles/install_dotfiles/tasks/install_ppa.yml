@@ -1,8 +1,8 @@
 ---
 - name: Add all PPA repositories
   block:
-    - debug: "Adding PPA repo: {{ ppa_source }}"
-    - apt_repository:
+    - name: "Adding PPA repo: {{ ppa_source }}"
+      apt_repository:
         repo: "{{ ppa_source }}"
         codename: "{{ ubuntu_codename }}"
         state: present
@@ -17,10 +17,10 @@
     update_cache: true
     cache_valid_time: 3600
   register: apt_update_result
-  ignore_errors: true
+  failed_when: apt_update_result.rc != 0
 
 - name: Install PPA packages
   apt:
     name: "{{ ppa | dict2items | map(attribute='key') | list }}"
     state: present
-  ignore_errors: true
+  when: ppa is defined
