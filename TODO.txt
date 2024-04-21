@@ -1,0 +1,3 @@
+2 repo:
+ - dotfiles, minden cfg-vel
+ - dotfiles_installer -> ez, kicsekkolja es hasznalja az elsot

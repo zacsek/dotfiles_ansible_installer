@@ -9,16 +9,16 @@
   tasks:
     - name: Install NERDFonts
       include_role:
-        name: install_nerdfont
+        name: nerdfont
 
     - name: Install essential CLI apps
       include_role:
-        name: install_cli_apps
+        name: cli_apps
 
     - name: Install dotfiles, neovim
       include_role:
-        name: install_dotfiles
+        name: dotfiles
 
     - name: Install ASDF, asdf plugins, and latest Ruby
       include_role:
-        name: install_asdf
+        name: asdf
