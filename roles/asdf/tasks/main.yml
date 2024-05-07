@@ -1,5 +1,6 @@
 ---
 - name: Install ASDF prerequisites.
+  become: true
   apt:
     name:
       - git
@@ -17,6 +18,7 @@
   command: source ~/.bashrc
 
 - name: Install system dependencies for plugins
+  become: true
   apt:
     name: "{{ asdf | map(attribute='dependencies') | select('defined') | flatten | unique | sort }}"
     state: present

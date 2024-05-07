@@ -2,17 +2,30 @@
 - name: Checkout dotfiles repo
   git:
     repo: 'https://github.com/zacsek/dotfiles'
-    dest: {{ ansible_user_dir }}/.dotfiles
+    dest: "{{ ansible_user_dir }}/.dotfiles"
+
+- name: Rename conflicting files before stowing dotfiles (idempotent, no symlinks)
+  shell: |
+    ruby <<-'RUBY'
+      require 'date'
+      require 'pathname'
+
+      base_dir = "{{ ansible_user_dir }}/.dotfiles/{{ item }}"
+      dest_dir = "{{ ansible_user_dir }}"
+      files = Dir.glob("#{base_dir}/**/*", File::FNM_DOTMATCH).select { |p| File.file?(p) }.map { |f| f.gsub(base_dir, dest_dir)}
+      files.each do |file|
+        if File.exist?(file) && !Pathname.new(file).descend.any? { |f| File.symlink?(f) }
+          backup_file = file + ".#{Date.today.to_s}.bak"
+          # puts "mv #{file} -> #{backup_file}"
+          File.rename(file, backup_file)
+        end
+      end
+    RUBY
+  with_items: "{{ dotfile_packages }}"
 
 - name: Symlink all to user
-  shell: stow -d {{ ansible_user_dir }}/.dotfiles -t {{ ansible_user_dir }}/ {{ item }}
-  with_items:
-    - bash
-    # - zsh
-    - vim
-    - nvim
-    - git
-    # - tmux
+  shell: stow -d "{{ ansible_user_dir }}/.dotfiles" -t "{{ ansible_user_dir }}/" "{{ item }}"
+  with_items: "{{ dotfile_packages }}"
 
 # - name: Symlink all to root
 #   shell: stow -d {{ ansible_user_dir }}/.dotfiles -t /root/ {{ item }}

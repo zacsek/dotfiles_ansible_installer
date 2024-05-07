@@ -21,8 +21,7 @@ apt:
   bat:
     description: cat(1) clone with syntax highlighting and git integration
   btop:
-    description: Modern and colorful command line resource monitor that shows usage
-      and stats
+    description: Modern and colorful command line resource monitor that shows usage and stats
   duf:
     description: Disk Usage/Free Utility
   fdupes:
@@ -54,8 +53,7 @@ apt:
   entr:
     description: Run arbitrary commands when files change
   googler:
-    description: Power tool to Google (Web & News) and Google Site Search from the
-      terminal
+    description: Power tool to Google (Web & News) and Google Site Search from the terminal
   autossh:
     description: Automatically restart SSH sessions and tunnels
   parallel:
@@ -80,3 +78,5 @@ apt:
     description: CLI, cURL-like tool for humans
   tilix:
     description: Tiling terminal emulator for GNOME
+  ruby:
+    description: Interpreter of object-oriented scripting language Ruby (default version)

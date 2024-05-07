@@ -1,0 +1,6 @@
+---
+dotfile_packages:
+  - bash
+  - vim
+  - nvim
+  - git

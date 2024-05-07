@@ -1,5 +1,6 @@
 ---
 - name: Install CLI applications
+  become: true
   apt:
     name: "{{ packages }}"
     state: present
